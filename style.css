@@ -1,0 +1,127 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f4f5f9; /* Fundo cinza bem clarinho/gelo */
+  color: #333333;
+  padding: 20px;
+}
+
+/* Cabeçalho */
+.cabecalho {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.cabecalho h1 {
+  color: #7c3aed; /* Roxo claro moderno */
+  font-size: 2.2rem;
+  margin-bottom: 5px;
+}
+
+.subtitulo {
+  color: #6b7280;
+  font-size: 1.1rem;
+}
+
+/* Área de Conteúdo */
+.conteudo-principal {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Grade de Cards de Resumo */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+/* Estilo individual de cada Card */
+.card {
+  background-color: #ffffff; /* Fundo branco para sobressair */
+  padding: 18px;
+  border-radius: 12px;
+  /* Sombra bem suave para dar efeito de flutuar */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  border-top: 4px solid #7c3aed; /* Detalhe em roxo claro */
+}
+
+.card h3 {
+  font-size: 0.9rem;
+  color: #6b7280;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.card-valor {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #1f2937;
+}
+
+.card-subtexto {
+  display: block;
+  font-size: 0.8rem;
+  color: #10b981; /* Verde para destacar 'Frequência adequada' */
+  margin-top: 4px;
+}
+
+/* Tabela Responsiva */
+.tabela-container {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  overflow-x: auto; /* Permite rolar pro lado no celular se não couber */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+th, td {
+  padding: 14px 16px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+th {
+  background-color: #f9fafb;
+  color: #4b5563;
+  font-weight: 600;
+}
+
+tr:hover {
+  background-color: #f8f7ff; /* Destaque suave roxo ao passar o mouse */
+}
+
+/* Estilos de Situação (Badges) */
+.situacao {
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.situacao-bom {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+.situacao-atencao {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+.situacao-indisponivel {
+  background-color: #f3f4f6;
+  color: #6b7280;
+}
