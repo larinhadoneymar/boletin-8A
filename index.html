@@ -15,54 +15,110 @@
   </header>
 
   <main class="conteudo-principal">
-    
-    <!-- Área Superior: Cards de Resumo -->
-    <section class="cards-grid">
-      <div class="card">
-        <h3>Média Geral</h3>
-        <p id="card-media" class="card-valor">—</p>
-      </div>
 
-      <div class="card">
-        <h3>Total de Faltas</h3>
-        <p id="card-faltas" class="card-valor">—</p>
+    <!-- Área de Acesso por PIN -->
+    <section id="secao-login" class="secao-card">
+      <h2>Acesso ao Boletim</h2>
+      <div class="info-aluno-login">
+        <p><strong>Série:</strong> 8º Ano</p>
+        <p><strong>Turma:</strong> 8A</p>
+        <p><strong>Número de Chamada:</strong> 18</p>
       </div>
-
-      <div class="card">
-        <h3>Bom Desempenho</h3>
-        <p id="card-bom-desempenho" class="card-valor">—</p>
-      </div>
-
-      <div class="card">
-        <h3>Precisa de Atenção</h3>
-        <p id="card-atencao" class="card-valor">—</p>
-      </div>
-
-      <div class="card">
-        <h3>Frequência</h3>
-        <p id="card-frequencia" class="card-valor">92%</p>
-        <span class="card-subtexto">Frequência adequada</span>
-      </div>
+      <form id="form-login" class="form-login">
+        <div class="campo-grupo">
+          <label for="campo-pin">Digite seu PIN:</label>
+          <input type="password" id="campo-pin" placeholder="PIN" required autocomplete="off">
+        </div>
+        <button type="submit" id="btn-entrar" class="btn-primario">Entrar</button>
+      </form>
+      <div id="mensagem-login" class="mensagem-status"></div>
     </section>
 
-    <!-- Tabela Responsiva de Disciplinas -->
-    <section class="tabela-container">
-      <table>
-        <thead>
-          <tr>
-            <th>Disciplina</th>
-            <th>1º Tri</th>
-            <th>2º Tri</th>
-            <th>3º Tri</th>
-            <th>Média</th>
-            <th>Faltas</th>
-            <th>Situação</th>
-          </tr>
-        </thead>
-        <!-- O JavaScript vai preencher estas linhas automaticamente -->
-        <tbody id="tabela-boletim"></tbody>
-      </table>
-    </section>
+    <!-- Conteúdo do Boletim (exibido após login) -->
+    <div id="secao-boletim" class="escondido">
+      
+      <!-- Painel de Ações -->
+      <div class="painel-acoes">
+        <button id="btn-alterar-dados" class="btn-secundario">Alterar dados</button>
+      </div>
+
+      <!-- Área de Edição de Notas e Faltas -->
+      <section id="secao-edicao" class="secao-card escondido">
+        <h2>Editar Notas e Faltas</h2>
+        <form id="form-edicao">
+          <div class="tabela-container">
+            <table class="tabela-edicao">
+              <thead>
+                <tr>
+                  <th>Disciplina</th>
+                  <th>1º Tri (Nota)</th>
+                  <th>2º Tri (Nota)</th>
+                  <th>3º Tri (Nota)</th>
+                  <th>1º Tri (Faltas)</th>
+                  <th>2º Tri (Faltas)</th>
+                  <th>3º Tri (Faltas)</th>
+                </tr>
+              </thead>
+              <tbody id="tabela-edicao-corpo"></tbody>
+            </table>
+          </div>
+          <div class="edicao-botoes">
+            <button type="submit" id="btn-salvar-dados" class="btn-primario">Salvar alterações</button>
+            <button type="button" id="btn-cancelar-edicao" class="btn-cancelar">Cancelar</button>
+          </div>
+        </form>
+        <div id="mensagem-edicao" class="mensagem-status"></div>
+      </section>
+
+      <!-- Área Superior: Cards de Resumo -->
+      <section class="cards-grid">
+        <div class="card">
+          <h3>Média Geral</h3>
+          <p id="card-media" class="card-valor">—</p>
+        </div>
+
+        <div class="card">
+          <h3>Total de Faltas</h3>
+          <p id="card-faltas" class="card-valor">—</p>
+        </div>
+
+        <div class="card">
+          <h3>Bom Desempenho</h3>
+          <p id="card-bom-desempenho" class="card-valor">—</p>
+        </div>
+
+        <div class="card">
+          <h3>Precisa de Atenção</h3>
+          <p id="card-atencao" class="card-valor">—</p>
+        </div>
+
+        <div class="card">
+          <h3>Frequência</h3>
+          <p id="card-frequencia" class="card-valor">92%</p>
+          <span class="card-subtexto">Frequência adequada</span>
+        </div>
+      </section>
+
+      <!-- Tabela Responsiva de Disciplinas -->
+      <section class="tabela-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Disciplina</th>
+              <th>1º Tri</th>
+              <th>2º Tri</th>
+              <th>3º Tri</th>
+              <th>Média</th>
+              <th>Faltas</th>
+              <th>Situação</th>
+            </tr>
+          </thead>
+          <!-- O JavaScript vai preencher estas linhas automaticamente -->
+          <tbody id="tabela-boletim"></tbody>
+        </table>
+      </section>
+
+    </div>
 
   </main>
 
